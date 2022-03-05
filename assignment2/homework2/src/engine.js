@@ -2,8 +2,10 @@ let precomputeLT = [];
 let precomputeL = [];
 var cameraPosition = [50, 0, 100];
 
+let precomputeL_mat = [];
+
 var envmap = [
-	// 'assets/cubemap/CornellBox',
+	'assets/cubemap/CornellBox',
 	'assets/cubemap/GraceCathedral',
 	'assets/cubemap/Indoor',
 	'assets/cubemap/Skybox',
@@ -112,6 +114,9 @@ async function GAMES202Main() {
 			}
 			precomputeL[i][j] = lineArray;
 		}
+
+		let dum = getMat3ValueFromRGB2(precomputeL[i]);
+		precomputeL_mat.push(dum);
 	}
 
 	// TODO: load model - Add your Material here

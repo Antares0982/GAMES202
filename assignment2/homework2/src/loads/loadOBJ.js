@@ -59,7 +59,7 @@ function loadOBJ(renderer, path, name, objMaterial, transform) {
 									break;
 								// TODO: Add your PRTmaterial here
 								case 'PRTMaterial':
-									material = buildPRTMaterial(precomputeL,"./src/shaders/prtShader/prtVertex.glsl", "./src/shaders/prtShader/prtFragment.glsl");
+									material = buildPRTMaterial(precomputeL, "./src/shaders/prtShader/prtVertex.glsl", "./src/shaders/prtShader/prtFragment.glsl");
 									break;
 
 								case 'SkyBoxMaterial':
