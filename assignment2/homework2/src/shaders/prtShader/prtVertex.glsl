@@ -15,6 +15,7 @@ void main() {
     gl_Position = uProjectionMatrix * uViewMatrix * uModelMatrix * vec4(aVertexPosition, 1.0);
 
     vColor = 
-    // (2.0/3.1415926)*
+    (2.0/3.1415926)*
     vec3(dot(uPrecomputeLR[0], aPrecomputeLT[0]) + dot(uPrecomputeLR[1], aPrecomputeLT[1]) + dot(uPrecomputeLR[2], aPrecomputeLT[2]), dot(uPrecomputeLG[0], aPrecomputeLT[0]) + dot(uPrecomputeLG[1], aPrecomputeLT[1]) + dot(uPrecomputeLG[2], aPrecomputeLT[2]), dot(uPrecomputeLB[0], aPrecomputeLT[0]) + dot(uPrecomputeLB[1], aPrecomputeLT[1]) + dot(uPrecomputeLB[2], aPrecomputeLT[2]));
+    // vColor = pow(vColor, vec3(2.2));
 }
